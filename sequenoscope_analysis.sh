@@ -87,7 +87,7 @@ mkdir -p $filter_output_dir
 
 # The sequenoscope filter_ONT command.
 echo "sequenoscope filter_ONT --input_fastq ${combined_fastq_file}--classification unblocked --input_summary ${seq_summary_file} -o ${filter_output_dir} -op ${output_filename_prefix}"
-sequenoscope filter_ONT --input_fastq ${combined_fastq_file} --classification unblocked --input_summary ${summary_input_file} -o ${filter_output_dir} -op ${output_filename_prefix}
+sequenoscope filter_ONT --input_fastq ${combined_fastq_file} --classification unblocked --input_summary ${seq_summary_file} -o ${filter_output_dir} -op ${output_filename_prefix}
 
 # The sequenoscope plot output directory.
 plot_output_dir="${output_dir}/plot"
