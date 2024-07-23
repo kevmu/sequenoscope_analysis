@@ -59,12 +59,12 @@ if [ ! -s $combined_fastq_file ]; then
         # If the fastq extension is ".fastq.gz" then use gunzip -c to uncompress the gzip file.
         if [[ $(echo ${fastq_extension} | grep ".fastq.gz") ]]; then
             echo "gunzip -c ${fastq_file} >> ${combined_fastq_file}";
-            #gunzip -c ${fastq_file} >> ${combined_fastq_file}
+            gunzip -c ${fastq_file} >> ${combined_fastq_file}
             
         # Else If the fastq extension is ".fastq" then then use the cat command to concatenate the files.
         elif [[ $(echo ${fastq_extension} | grep ".fastq") ]]; then
             echo "cat ${fastq_file} >> ${combined_fastq_file}";
-            #cat ${fastq_file} >> ${combined_fastq_file}
+            cat ${fastq_file} >> ${combined_fastq_file}
         fi
     done
 else
@@ -87,7 +87,7 @@ mkdir -p $filter_output_dir
 
 # The sequenoscope filter_ONT command.
 echo "sequenoscope filter_ONT --input_fastq ${combined_fastq_file}--classification unblocked --input_summary ${seq_summary_file} -o ${filter_output_dir} -op ${output_filename_prefix}"
-sequenoscope filter_ONT --input_fastq ${combined_fastq_file}--classification unblocked --input_summary ${summary_input_file} -o ${filter_output_dir} -op ${output_filename_prefix}
+sequenoscope filter_ONT --input_fastq ${combined_fastq_file} --classification unblocked --input_summary ${summary_input_file} -o ${filter_output_dir} -op ${output_filename_prefix}
 
 # The sequenoscope plot output directory.
 plot_output_dir="${output_dir}/plot"
