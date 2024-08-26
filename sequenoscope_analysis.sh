@@ -78,8 +78,8 @@ analyze_output_dir="${output_dir}/analyze"
 mkdir -p $analyze_output_dir
 
 # The sequenoscope analyze command.
-echo "sequenoscope analyze --input_fastq ${combined_fastq_file} --input_reference ${ref_fasta_file} -seq_type ${seq_type} --force -o ${analyze_output_dir} -op ${output_filename_prefix}"
-sequenoscope analyze --input_fastq ${combined_fastq_file} --input_reference ${ref_fasta_file} -seq_type ${seq_type} --force -o ${analyze_output_dir} -op ${output_filename_prefix}
+echo "sequenoscope analyze --input_fastq ${combined_fastq_file} --input_reference ${ref_fasta_file} -seq_type ${seq_type} -o ${analyze_output_dir} -op ${output_filename_prefix} --force"
+sequenoscope analyze --input_fastq ${combined_fastq_file} --input_reference ${ref_fasta_file} -seq_type ${seq_type} -o ${analyze_output_dir} -op ${output_filename_prefix} --force
 
 # The sequenoscope filter_ONT output directory.
 filter_output_dir="${output_dir}/filtered_fastq"
@@ -94,5 +94,6 @@ plot_output_dir="${output_dir}/plot"
 mkdir -p $plot_output_dir
 
 # The sequenoscope plot command.
-echo "sequenoscope plot --test_dir ${analyze_output_dir} --control_dir ${analyze_output_dir} --output_dir ${plot_output_dir}"
-sequenoscope plot --test_dir ${analyze_output_dir} --control_dir ${analyze_output_dir} --output_dir ${plot_output_dir}
+echo "sequenoscope plot --test_dir ${analyze_output_dir} --control_dir ${analyze_output_dir} --output_dir ${plot_output_dir} --force"
+sequenoscope plot --test_dir ${analyze_output_dir} --control_dir ${analyze_output_dir} --output_dir ${plot_output_dir} --force
+
