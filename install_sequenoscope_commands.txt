@@ -1,0 +1,30 @@
+### Installing sequenoscope.
+
+## Installation using conda packages.
+
+conda create --name sequenoscope
+
+conda activate sequenoscope
+
+conda install -c conda-forge -c bioconda sequenoscope
+
+conda install -c bioconda mash
+conda install -c bioconda fastp
+conda install -c bioconda minimap2
+conda install -c bioconda samtools
+conda install -c bioconda biopython
+
+### Python Packages
+pip install pysam
+pip install plotly
+pip install pandas
+pip install scipy
+pip install six
+pip install pytest
+pip install psutil
+pip install seqtk
+pip install simplejson
+
+
+
+

@@ -16,24 +16,24 @@ conda activate sequenoscope
 ## The sequenoscope program parameters.
 
 # The fastq file input directory.
-fastq_input_dir="/Users/kevin.muirhead/Desktop/AAFC_Bioinformatics/sequenoscope/sequenoscope_analysis/fastqs"
+fastq_input_dir="/archive/dumonceauxt/Cs-CE24/barcode01"
 
 # The extension of the fastq files. Can either be ".fastq" or ".fastq.gz"
 fastq_extension=".fastq.gz"
 #fastq_extension=".fastq"
 
 # The ONT sequencing summary file.
-seq_summary_file="/home/AGR.GC.CA/dumonceauxt/AS_sequenoscope/clubroot/sequencing_summary_FAW00817_8cd54fd6_63549f2a.txt"
+seq_summary_file="/archive/dumonceauxt/Cs-CE24/run1-240628/sequencing_summary_FAV90508_f2e0f8c3_50e2eb41.txt"
 
 # The fastq reference file.
-ref_fasta_file="/Users/kevin.muirhead/Desktop/AAFC_Bioinformatics/sequenoscope/sequenoscope_analysis/3-ONTPb3genome-V3_Flye_PH219.fa"
+ref_fasta_file="/archive/dumonceauxt/Cs-CE24/GCA_000633955.1_Cs_genomic.fna"
 #ref_fasta_file="/home/AGR.GC.CA/dumonceauxt/AS_sequenoscope/3-ONTPb3genome-V3_Flye_PH219.fa"
 
 # The output filename prefix.
-output_filename_prefix="3HSS_clubroot"
+output_filename_prefix="Cs-CE24"
 
 # The output file directory.
-output_dir="/Users/kevin.muirhead/Desktop/AAFC_Bioinformatics/sequenoscope/sequenoscope_analysis/output"
+output_dir="/home/AGR.GC.CA/muirheadk/sequenoscope_analysis/output"
 mkdir -p $output_dir
 
 ## The sequenoscope filter_ONT program parameters.
